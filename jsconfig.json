@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "checkJs": false
+    },
+    "include": [
+        "src/**/*",
+        "vite.config.js",
+        "tailwind.config.js"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
