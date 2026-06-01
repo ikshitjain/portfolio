@@ -1,4 +1,4 @@
-import StarField from './components/StarField'
+import FuturisticBackground from './components/FuturisticBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -12,7 +12,7 @@ export default function App() {
     return (
         <div className="app">
             {/* Animated space background */}
-            <StarField />
+            <FuturisticBackground />
 
             <Navbar />
             <main>
