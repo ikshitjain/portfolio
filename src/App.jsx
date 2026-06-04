@@ -5,6 +5,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Responsibility from './components/Responsibility'
+import Terminal from './components/Terminal'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -25,6 +26,8 @@ export default function App() {
                 <Projects />
                 <hr className="section-divider" />
                 <Responsibility />
+                <hr className="section-divider" />
+                <Terminal />
                 <hr className="section-divider" />
                 <Contact />
             </main>
