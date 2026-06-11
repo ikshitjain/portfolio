@@ -69,18 +69,21 @@ export default function Contact() {
                         </p>
 
                         <div className="contact-links">
-                            {socialLinks.map((link) => (
-                                <a
-                                    key={link.label}
-                                    href={link.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="contact-link"
-                                >
-                                    <span className="link-icon">{link.icon}</span>
-                                    {link.label}
-                                </a>
-                            ))}
+                            {socialLinks.map((link) => {
+                                const isExternal = !link.href.startsWith('mailto:') && !link.href.startsWith('tel:');
+                                return (
+                                    <a
+                                        key={link.label}
+                                        href={link.href}
+                                        target={isExternal ? '_blank' : undefined}
+                                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                                        className="contact-link"
+                                    >
+                                        <span className="link-icon">{link.icon}</span>
+                                        {link.label}
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
 
