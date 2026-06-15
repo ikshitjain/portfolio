@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 
 const typingTexts = [
-    'Full-Stack Developer',
     'ML Enthusiast',
     'CSE Undergraduate @ MediCaps',
     'Graphics Head @ ACM Club',
