@@ -4,15 +4,14 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi'
 const projects = [
     {
         id: '01',
-        title: 'Student Record Management System',
-        category: 'FULL-STACK DEVELOPMENT',
-        date: 'Nov 2025',
+        title: 'Smart Classroom Attention and Behavior Monitoring System',
+        category: 'Computer Vision',
+        date: 'June 2026',
         description:
-            'A modern web application for managing student details and records. Features dynamic CRUD operations, a responsive UI, and robust backend handling.',
-        tags: ['Django', 'MongoDB', 'Python', 'JavaScript', 'HTML/CSS'],
-        image: '/images/student_preview.png',
+            'An AI-powered classroom monitoring system that analyzes student attention, behavior, and engagement in real-time using computer vision and deep learning techniques.',
+        tags: ['Python', 'YOLOv8', 'OpenCV', 'TensorFlow', 'Computer Vision'],
+        image: '/images/smart_classroom_preview.png',
         github: 'https://github.com/ikshitjain',
-        demo: null,
     },
     {
         id: '02',
@@ -25,6 +24,18 @@ const projects = [
         image: '/images/salary_preview.png',
         github: 'https://github.com/ikshitjain',
         demo: 'https://salaryprediction-pqhvfd5kkvpbzebyik.streamlit.app/',
+    },
+    {
+        id: '05',
+        title: 'Smart-Insure AI',
+        category: 'Artificial Intelligence',
+        date: 'May 2026',
+        description:
+            'An AI-powered insurance platform utilizing machine learning and Retrieval-Augmented Generation (RAG) for claim analysis, fraud detection, and intelligent document search.',
+        tags: ['Python', 'LangChain', 'FAISS', 'RAG', 'Streamlit'],
+        image: '/images/smart_insure_preview.png',
+        github: 'https://github.com/ikshitjain',
+        demo: null,
     },
 ]
 
