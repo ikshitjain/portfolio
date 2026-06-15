@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useReveal } from '../hooks/useReveal'
 
 const stats = [
@@ -8,6 +9,7 @@ const stats = [
 
 export default function About() {
     const ref = useReveal()
+    const [imageError, setImageError] = useState(false)
 
     return (
         <section id="about" ref={ref} className="reveal">
@@ -17,7 +19,15 @@ export default function About() {
                 <div className="about-grid">
                     {/* Avatar */}
                     <div className="about-avatar">
-                        <span className="initials">IJ</span>
+                        {!imageError ? (
+                            <img 
+                                src="/avatar.jpg" 
+                                alt="Ikshit Jain" 
+                                onError={() => setImageError(true)} 
+                            />
+                        ) : (
+                            <span className="initials">IJ</span>
+                        )}
                     </div>
 
                     {/* Bio */}
