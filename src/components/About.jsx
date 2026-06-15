@@ -21,21 +21,29 @@ export default function About() {
                     </div>
 
                     {/* Bio */}
-                    <div className="about-bio">
-                        <h3>I'm a passionate developer who loves building things.</h3>
-                        <p>
-                            I'm <strong>Ikshit Jain</strong>, a Computer Science Engineering
-                            undergraduate at MediCaps University, Indore (2023–2027). I specialize
-                            in <strong>Full-Stack Development</strong> and{' '}
-                            <strong>Predictive Analytics</strong>, building responsive web
-                            applications and machine learning models using Python and MongoDB.
-                        </p>
-                        <p>
-                            Currently serving as <strong>Graphics Head</strong> at ACM Student
-                            Chapter Techno Club, leading creative design for events and promotions.
-                        </p>
+                   <div className="about-bio">
+                        <h3>Building AI-powered solutions and modern web applications.</h3>
 
-                        <div className="about-stats">
+                    <p>
+                    I'm <strong>Ikshit Jain</strong>, a Computer Science Engineering
+                    undergraduate at <strong>MediCaps University, Indore</strong>
+                    (2023–2027).  My interests include <strong>Artificial Intelligence</strong>,
+                    <strong> Machine Learning</strong>, <strong>Computer Vision</strong>.
+    </p>
+
+    <p>
+        I have developed projects such as <strong>Smart Classroom Attention and Behavior Monitoring System</strong>,
+        <strong> Smart-Insure AI</strong>, and <strong>Salary Prediction Model</strong>,
+        applying machine learning, computer vision, and predictive analytics to solve real-world problems.
+    </p>
+
+    <p>
+        Currently serving as <strong>Graphics Head</strong> at the ACM Student
+        Chapter Techno Club, where I lead creative design initiatives while
+        continuously enhancing my technical and leadership skills.
+    </p>
+
+    <div className="about-stats">
                             {stats.map((s) => (
                                 <div key={s.label} className="about-stat">
                                     <div className="stat-value">{s.value}</div>
