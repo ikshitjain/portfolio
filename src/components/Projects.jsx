@@ -26,7 +26,7 @@ const projects = [
         demo: 'https://salaryprediction-pqhvfd5kkvpbzebyik.streamlit.app/',
     },
     {
-        id: '05',
+        id: '03',
         title: 'Smart-Insure AI',
         category: 'Artificial Intelligence',
         date: 'May 2026',
@@ -35,7 +35,7 @@ const projects = [
         tags: ['Python', 'LangChain', 'FAISS', 'RAG', 'Streamlit'],
         image: '/images/smart_insure_preview.png',
         github: 'https://github.com/ikshitjain',
-        demo: null,
+        demo: 'https://insurance-ai-ftetfqw6kfruveatuq9yjfbyik.streamlit.app/',
     },
 ]
 
