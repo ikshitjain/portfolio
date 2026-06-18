@@ -21,7 +21,7 @@ export default function About() {
                     <div className="about-avatar">
                         {!imageError ? (
                             <img 
-                                src="/avatar.jpg" 
+                                src="/photo.jpg" 
                                 alt="Ikshit Jain" 
                                 onError={() => setImageError(true)} 
                             />
