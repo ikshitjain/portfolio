@@ -758,6 +758,12 @@ section,
 /* ============================================
    EXPERIENCE
    ============================================ */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .experience-card {
   padding: 32px;
   background: var(--bg-glass-card);

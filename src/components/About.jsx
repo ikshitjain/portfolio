@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useReveal } from '../hooks/useReveal'
 
 const stats = [
-    { value: '2+', label: 'Projects' },
-    { value: '10+', label: 'Technologies' },
+    { value: '3+', label: 'Projects' },
+    { value: 'Google', label: 'AI-ML Intern' },
     { value: 'ACM', label: 'Graphics Head' },
 ]
 
@@ -37,20 +37,22 @@ export default function About() {
                     <p>
                     I'm <strong>Ikshit Jain</strong>, a Computer Science Engineering
                     undergraduate at <strong>MediCaps University, Indore</strong>
-                    (2023–2027).  My interests include <strong>Artificial Intelligence</strong>,
-                    <strong> Machine Learning</strong>, <strong>Computer Vision</strong>.
+                    (2023–2027). My interests lie at the intersection of <strong>Artificial Intelligence</strong>,
+                    <strong> Machine Learning</strong>, and <strong>Computer Vision</strong>.
     </p>
 
     <p>
-        I have developed projects such as <strong>Smart Classroom Attention and Behavior Monitoring System</strong>,
-        <strong> Smart-Insure AI</strong>, and <strong>Salary Prediction Model</strong>,
-        applying machine learning, computer vision, and predictive analytics to solve real-world problems.
+        Recently, I completed a summer internship as a <strong>Google AI-ML Intern</strong>, where I developed and deployed neural network models on Android devices using TensorFlow Lite with up to 97% accuracy.
     </p>
 
     <p>
-        Currently serving as <strong>Graphics Head</strong> at the ACM Student
-        Chapter Techno Club, where I lead creative design initiatives while
-        continuously enhancing my technical and leadership skills.
+        I have built projects like the <strong>Smart Classroom Attention and Behavior Monitoring System</strong>,
+        <strong>Smart-Insure AI</strong>, and the <strong>Salary Prediction Model</strong>, applying deep learning and predictive analytics to solve real-world problems.
+    </p>
+
+    <p>
+        Additionally, I serve as the <strong>Graphics Head</strong> at the ACM Student
+        Chapter Techno Club, leading creative design initiatives and branding.
     </p>
 
     <div className="about-stats">

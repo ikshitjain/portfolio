@@ -115,17 +115,18 @@ export default function Terminal() {
                     case 'projects':
                         output = (
                             <div className="terminal-list-output">
-                                <p>→ AI Insurance System</p>
-                                <p>→ Student Management System</p>
-                                <p>→ Grade Prediction System</p>
-                                <p>→ Property Price Prediction</p>
-                                <p>→ SaaS Applications</p>
+                                <p>→ Smart Classroom Attention & Behavior Monitoring System</p>
+                                <p>→ Smart-Insure AI (ML & RAG-based Insurance)</p>
+                                <p>→ Salary Prediction Model</p>
                             </div>
                         )
                         break
                     case 'experience':
                         output = (
                             <div className="terminal-list-output">
+                                <p>→ Google AI-ML Intern at Medi-Caps University (June 2026 - July 2026)</p>
+                                <p className="indent">- Earning 10 digital skill badges, built 4 Android apps using TensorFlow Lite with up to 97% accuracy.</p>
+                                <br />
                                 <p>→ Graphics Head at ACM Student Chapter Techno Club (Aug 2025 - Present)</p>
                                 <p className="indent">- Leading visual branding, graphic design, and social media content for tech events.</p>
                             </div>
