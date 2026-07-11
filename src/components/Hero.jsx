@@ -63,7 +63,7 @@ export default function Hero() {
                             View Projects
                         </a>
                         <a
-                            href="/Ikshit_Jain_CV.pdf"
+                            href="https://drive.google.com/file/d/14jB4PeJefb__fQN0hXrFoacDahQffjLN/view?usp=sharing"
                             download
                             className="btn btn-outline"
                         >

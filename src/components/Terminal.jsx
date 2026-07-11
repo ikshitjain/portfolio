@@ -6,6 +6,7 @@ export default function Terminal() {
     const revealRef = useReveal()
     const terminalBodyRef = useRef(null)
     const inputRef = useRef(null)
+    const startupIntervalRef = useRef(null)
 
     const [inputValue, setInputValue] = useState('')
     const [history, setHistory] = useState([])
@@ -14,6 +15,9 @@ export default function Terminal() {
 
     // Simulated terminal startup sequence
     useEffect(() => {
+        // Reset logs to empty on mount to prevent duplicates in React 18 Strict Mode
+        setLogs([])
+
         const welcomeLines = [
             'System initializing...',
             'Establishing connection to ikshitjain.dev...',
@@ -23,20 +27,32 @@ export default function Terminal() {
         ]
 
         let currentLine = 0
-        const interval = setInterval(() => {
+        startupIntervalRef.current = setInterval(() => {
             if (currentLine < welcomeLines.length) {
-                setLogs(prev => [...prev, {
-                    id: `startup-${currentLine}`,
-                    type: 'output',
-                    content: welcomeLines[currentLine]
-                }])
+                setLogs(prev => {
+                    const lineContent = welcomeLines[currentLine]
+                    // Prevent duplicate entries if they already exist in the state
+                    if (prev.some(log => log.content === lineContent)) {
+                        return prev
+                    }
+                    return [...prev, {
+                        id: `startup-${currentLine}-${Date.now()}`,
+                        type: 'output',
+                        content: lineContent
+                    }]
+                })
                 currentLine++
             } else {
-                clearInterval(interval)
+                clearInterval(startupIntervalRef.current)
+                startupIntervalRef.current = null
             }
         }, 150)
 
-        return () => clearInterval(interval)
+        return () => {
+            if (startupIntervalRef.current) {
+                clearInterval(startupIntervalRef.current)
+            }
+        }
     }, [])
 
     // Focus input on container click
@@ -55,6 +71,12 @@ export default function Terminal() {
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
+            // Cancel the startup sequence if the user presses enter
+            if (startupIntervalRef.current) {
+                clearInterval(startupIntervalRef.current)
+                startupIntervalRef.current = null
+            }
+
             const cmd = inputValue.trim().toLowerCase()
             const inputLogId = `input-${Date.now()}`
             const outputLogId = `output-${Date.now()}`
@@ -154,6 +176,10 @@ export default function Terminal() {
                         output = 'Opening resume PDF in a new tab...'
                         break
                     case 'clear':
+                        if (startupIntervalRef.current) {
+                            clearInterval(startupIntervalRef.current)
+                            startupIntervalRef.current = null
+                        }
                         setLogs([])
                         setInputValue('')
                         return
